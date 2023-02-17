@@ -6,7 +6,9 @@ A python wrapper using the Homebridge UI API.
 | `get_all_accessories` | None | Retrieves all accessories from Homebridge and returns a dictionary with all accessory information |
 | `get_accessorie` | `uniqueId`: str | Retrieves an accessory using its `uniqueId` from Homebridge and returns a dictionary with all the accessory information |
 | `get_layout` | None | Retrieves the layout of the accessories from Homebridge UI (user-dependent) and returns a dictionary with the layout of the accessories |
-| `set_accessorie` | `uniqueId`: str, `characteristicType`: str, `value`: str | Sets a value to a characteristic of an accessory using its `uniqueId`, `characteristicType`, and `value`, and returns the old value of the characteristic |
+| `set_accessorie` | `uniqueId`: str, <br> `characteristicType`: str, <br> `value`: str | Sets a value to a characteristic of an accessory using its `uniqueId`, `characteristicType`, and `value`, and returns the old value of the characteristic |
+| `get_characteristics` | `uniqueId`: str | Get all the characteristics of an accessory `{characteristics : value}` |
+
 
 
 # Backup
