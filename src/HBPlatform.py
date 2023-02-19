@@ -77,7 +77,10 @@ class HBPlatform:
         platform=self.get_platform_info()   
         if platform!="Docker":
             raise Exception("This method is only available on Docker hosts, this is a "+self.get_platform_info()+" host")
-        return self.HBController.send_request("PUT","platform-tools/docker/startup-script",data=script).status_code==200
+
+        if "#!/bin/sh " not in script:
+            script="#!/bin/sh \n"+script
+        return self.HBController.send_request("PUT","platform-tools/docker/startup-script",data={"script":script}).status_code==200
         
 
 
