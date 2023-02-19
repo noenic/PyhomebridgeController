@@ -71,7 +71,7 @@ class HBController:
             dict: The response of the request
         """
         reponse=post(self.BASE_URL+"setup-wizard/create-first-user",json={"name":"Admin","username":username,"password":password,"admin":True},verify=False)
-        return reponse.status_code==200
+        return reponse.status_code==201
 
 
 
